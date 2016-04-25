@@ -94,7 +94,7 @@
 			// new player
 			mysqli_query($conn,"INSERT INTO $db_name.performanceTeam (firstBlood, firstTower, firstInhibitor, firstBaron, firstDragon, firstRiftHerald, towerTakedowns, inhibitorTakedowns, baronKills, dragonKills, riftHeraldKills, team_identifier) VALUES ('".$firstBlood."', '".$firstTower."', '".$firstInhibitor."', '".$firstBaron."', '".$firstDragon."', '".$firstRiftHerald."', '".$towerKills."', '".$inhibitorKills."', '".$baronKills."', '".$dragonKills."', '".$riftHeraldKills."', '".$matchId."', '".$RowMysqliInsertId."')");
 		}*/
-		$playedMatch = mysqli_query($conn,"SELECT * FROM performanceTeam WHERE tournamentMatch_identifier = '$matchId' AND team_identifier = '$matchState' AND round = '$RowMysqliInsertId'");
+		$playedMatch = mysqli_query($conn,"SELECT * FROM performanceTeam WHERE tournamentMatch_identifier = '$matchId' AND team_identifier = '$RowMysqliInsertId' AND round = '$matchState'");
 		if(mysqli_num_rows($rows) > 0) {
 			
 		}
